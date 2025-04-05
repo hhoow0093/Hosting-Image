@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <style>
+
+  </style>
+  <body>
+    <section class="navbar">
+      <div class="logo">
+        <img src="./PT/Logo/Group-14.svg" alt="" srcset="" class="svg-logo" />
+      </div>
+      <div class="link">
+        <a href="./index.html" class="text-link"
+          ><li class="item-link">Produk</li></a
+        >
+        <a href="./foto.html" class="text-link"
+          ><li class="item-link">Foto</li></a
+        >
+        <div class="link-phone">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="75"
+            height="75"
+            fill="white"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+    <section class="overlay hidden">
+      <div class="link-phone2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="75"
+          height="75"
+          fill="white"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
+        </svg>
+      </div>
+      <a href="./index.html" class="phone-a"
+        ><li class="item-link">Produk</li></a
+      >
+      <a href="./foto.html" class="phone-a"><li class="item-link">Foto</li></a>
+    </section>
+    <!-- swiper -->
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="./PT/Foto/1.jpg" alt="" class="imaa"></div>
+        <div class="swiper-slide"><img src="./PT/Foto/2.jpg" alt="" class="imaa"></div>
+        <div class="swiper-slide"><img src="./PT/Foto/3.jpg" alt="" class="imaa"></div>
+        <div class="swiper-slide"><img src="./PT/Foto/4.jpg" alt="" class="imaa"></div>
+        <div class="swiper-slide"><img src="./PT/Foto/5.jpg" alt="" class="imaa"></div>
+        <div class="swiper-slide"><img src="./PT/Foto/6.jpg" alt="" class="imaa"></div>
+        <div class="swiper-slide"><img src="./PT/Foto/7.jpg" alt="" class="imaa"></div>
+        <div class="swiper-slide"><img src="./PT/Foto/8.jpg" alt="" class="imaa"></div>
+        <div class="swiper-slide"><img src="./PT/Foto/9.jpg" alt="" class="imaa"></div>
+        <div class="swiper-slide"><img src="./PT/Foto/10.jpg" alt="" class="imaa"></div>
+        <div class="swiper-slide"><img src="./PT/Foto/11.jpg" alt="" class="imaa"></div>
+        <div class="swiper-slide"><img src="./PT/Foto/12.jpg" alt="" class="imaa"></div>
+        <div class="swiper-slide"><img src="./PT/Foto/13.jpeg" alt="" class="imaa"></div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const buttonNavbar = document.querySelector(".link-phone");
+      const buttonNavbar2 = document.querySelector(".link-phone2");
+      const overlay = document.querySelector(".overlay");
+      buttonNavbar2.addEventListener("click", () => {
+        overlay.classList.add("hidden");
+      });
+      buttonNavbar.addEventListener("click", () => {
+        overlay.classList.remove("hidden");
+      });
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
+  </body>
+</html>
